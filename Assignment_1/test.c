@@ -1,24 +1,29 @@
 #include <stdio.h>
-#include <string.h>
 #include "database.h"
 
 int main() {
-    Movie* movie = insert_movie("The Matrix");
-    add_actor_to_movie(movie, "Keanu Reeves");
-    add_actor_to_movie(movie, "Carrie-Anne Moss");
+    MovieList* db = create_database();
 
-    print_movie(movie);
+    insert_movie_record(db, "The Matrix");
+    insert_movie_record(db, "Inception");
+    insert_movie_record(db, "Avengers");
 
-    // Check if "Keanu Reeves" is in the list
-    Actor* actor = movie->actors->head;
-    while (actor != NULL) {
-        if (strcmp(actor->name, "Keanu Reeves") == 0) {
-            printf("Found Keanu Reeves in the movie!\n");
-            break;
-        }
-        actor = actor->next;
-    }
+    insert_actor_record(db, "The Matrix", "Keanu Reeves");
+    insert_actor_record(db, "The Matrix", "Carrie-Anne Moss");
+    insert_actor_record(db, "Inception", "Leonardo DiCaprio");
+    insert_actor_record(db, "Inception", "Cillian Murphy");
+    insert_actor_record(db, "Avengers", "Robert Downey Jr.");
+    insert_actor_record(db, "Avengers", "Scarlett Johansson");
 
-    free_movie(movie);
+    printf("All Movies:\n");
+    print_all_movies(db);
+
+    printf("\nActors in 'The Matrix':\n");
+    print_actors_in_movie(db, "The Matrix");
+
+    printf("\nActors in 'Avengers':\n");
+    print_actors_in_movie(db, "Avengers");
+
+    free_database(db);
     return 0;
 }
