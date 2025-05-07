@@ -65,8 +65,11 @@
     <ClCompile Include="database_avl.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="test_new.c">
+    <ClCompile Include="main.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="README.txt" />
   </ItemGroup>
 </Project>

@@ -146,7 +146,10 @@
     <ClCompile Include="movielist.c" />
     <ClCompile Include="movielist_avl.c" />
     <ClCompile Include="movie_avl.c" />
-    <ClCompile Include="test_new.c" />
+    <ClCompile Include="main.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="README.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
