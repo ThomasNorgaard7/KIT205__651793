@@ -1,9 +1,6 @@
 // Author: Thomas Norgaard
 // AI was used in the making of this code
 
-// Author: Thomas Norgaard
-// AI was used in the making of this code
-
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include <stdlib.h>

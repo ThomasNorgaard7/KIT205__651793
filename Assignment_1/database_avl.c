@@ -1,9 +1,6 @@
 // Author: Thomas Norgaard
 // AI was used in the making of this code
 
-// Author: Thomas Norgaard
-// AI was used in the making of this code
-
 #include "database_avl.h"
 
 MovieListAVL* create_database_avl() {
