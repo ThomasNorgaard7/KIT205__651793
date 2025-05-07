@@ -1,3 +1,6 @@
+// Author: Thomas Norgaard
+// AI was used in the making of this code
+
 #ifndef ACTOR_H
 #define ACTOR_H
 

@@ -1,3 +1,6 @@
+// Author: Thomas Norgaard
+// AI was used in the making of this code
+
 #ifndef AVLTREE_H
 #define AVLTREE_H
 

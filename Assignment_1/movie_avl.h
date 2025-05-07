@@ -1,3 +1,6 @@
+// Author: Thomas Norgaard
+// AI was used in the making of this code
+
 #ifndef MOVIE_AVL_H
 #define MOVIE_AVL_H
 

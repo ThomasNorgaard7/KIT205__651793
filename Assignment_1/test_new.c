@@ -1,3 +1,9 @@
+// Author: Thomas Norgaard
+// AI was used in the making of this code
+
+// Author: Thomas Norgaard
+// AI was used in the making of this code
+
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include <string.h>
@@ -45,6 +51,7 @@ void functional_test_prototype1() {
     print_actors_in_movie(db, "Missing Movie");
 
     free_database(db);
+// End block
 }
 
 void functional_test_prototype2() {
@@ -74,8 +81,10 @@ void functional_test_prototype2() {
     print_actors_in_movie_avl(db_avl, "Missing Movie");
 
     free_database_avl(db_avl);
+// End block
 }
 
+// Begin void block
 void performance_test_prototype1(int num_movies, int num_actors_per_movie) {
     printf("\n=== Performance Test: Prototype 1 ===\n");
     clock_t start = clock();
@@ -85,13 +94,17 @@ void performance_test_prototype1(int num_movies, int num_actors_per_movie) {
     char movie_title[50];
     char actor_name[50];
 
+// Begin for block
     for (int i = 0; i < num_movies; i++) {
         sprintf(movie_title, "Movie %d", i);
         insert_movie_record(db, movie_title);
+// Begin for block
         for (int j = 0; j < num_actors_per_movie; j++) {
             sprintf(actor_name, "Actor %d_%d", i, j);
             insert_actor_record(db, movie_title, actor_name);
+// End block
         }
+// End block
     }
 
     //print_all_movies(db); // Optionally comment out to improve performance visibility
@@ -101,8 +114,10 @@ void performance_test_prototype1(int num_movies, int num_actors_per_movie) {
     printf("Time taken (Prototype 2) (movies: %d)(actors: %d): %.2f seconds\n", num_movies, num_actors_per_movie, time_spent);
 
     free_database(db);
+// End block
 }
 
+// Begin void block
 void performance_test_prototype2(int num_movies, int num_actors_per_movie) {
     printf("\n=== Performance Test: Prototype 2 ===\n");
     clock_t start = clock();
@@ -112,13 +127,17 @@ void performance_test_prototype2(int num_movies, int num_actors_per_movie) {
     char movie_title[50];
     char actor_name[50];
 
+// Begin for block
     for (int i = 0; i < num_movies; i++) {
         sprintf(movie_title, "Movie %d", i);
         insert_movie_record_avl(db, movie_title);
+// Begin for block
         for (int j = 0; j < num_actors_per_movie; j++) {
             sprintf(actor_name, "Actor %d_%d", i, j);
             insert_actor_record_avl(db, movie_title, actor_name);
+// End block
         }
+// End block
     }
 
     //print_all_movies_avl(db); // Optionally comment out to improve performance visibility
@@ -128,6 +147,7 @@ void performance_test_prototype2(int num_movies, int num_actors_per_movie) {
     printf("Time taken (Prototype 1) (movies: %d)(actors: %d): %.2f seconds\n", num_movies, num_actors_per_movie, time_spent);
 
     free_database_avl(db);
+// End block
 }
 
 int main() {
@@ -138,20 +158,26 @@ int main() {
 
 #if RUN_PERFORMANCE_TESTS
     int j = Actor_Num;
+// Begin while block
     while (j > 0) {
         int i = Movie_Num;
+// Begin while block
         while (i > 0) {
             performance_test_prototype1(i, j);
             performance_test_prototype2(i, j);
 
             i = i - Movie_Incr;
+// End block
         }
 
         j = j - Actor_incr;
+// End block
     }
 
 
 #endif
 
+// Return value
     return 0;
+// End block
 }
