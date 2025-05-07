@@ -27,6 +27,18 @@
     <ClInclude Include="movielist.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="avltree.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="movielist_avl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="database_avl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="movie_avl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="movie.c">
@@ -38,10 +50,22 @@
     <ClCompile Include="database.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="test.c">
+    <ClCompile Include="movielist.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="movielist.c">
+    <ClCompile Include="avltree.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="movie_avl.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="movielist_avl.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="database_avl.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="test_new.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
