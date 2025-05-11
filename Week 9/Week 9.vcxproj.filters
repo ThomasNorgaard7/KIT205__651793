@@ -15,16 +15,20 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="list_2.h">
+    <ClCompile Include="main_10.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="graph_10.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="graph_10.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="list_2.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="main_2.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
+    <Text Include="graph.txt" />
+    <Text Include="SN_graph.txt" />
   </ItemGroup>
 </Project>

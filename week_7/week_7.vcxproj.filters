@@ -15,16 +15,11 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="list_2.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
+    <ClCompile Include="mian_7.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="list_2.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="main_2.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
+    <Text Include="input_7.txt" />
   </ItemGroup>
 </Project>

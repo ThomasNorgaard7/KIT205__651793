@@ -18,12 +18,24 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="graph_10.c" />
+    <ClCompile Include="main_10.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="graph_10.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="graph_10.txt" />
+    <Text Include="SN_graph_10.txt" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{e01eb5ab-699e-4351-896c-8ad06db723d8}</ProjectGuid>
-    <RootNamespace>Week2</RootNamespace>
+    <ProjectGuid>{a9b897f3-bf52-4e69-991c-95e7720111e8}</ProjectGuid>
+    <RootNamespace>Week9</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>Week_10</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -126,13 +138,6 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClInclude Include="list_2.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="list_2.c" />
-    <ClCompile Include="main_2.c" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

@@ -15,16 +15,17 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="graph.h">
+    <ClInclude Include="..\Week 9\graph_9.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
+    <Text Include="..\Week 9\graph.txt" />
+    <Text Include="..\Week 9\SN_graph.txt" />
   </ItemGroup>
   <ItemGroup>
-    <Text Include="graph.txt" />
+    <ClCompile Include="..\Week 9\main_9.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

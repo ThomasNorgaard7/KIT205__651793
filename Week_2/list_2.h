@@ -1,15 +1,14 @@
-// This header file contains declarations for a singly linked list data structure implementation in C.
 #pragma once 
 
 // Definition of a singly linked list node struct with an integer data field and a pointer to the next node.
 typedef struct listNode {
-	int data;
-	struct listNode* next;
-}*ListNodePtr; // Alias for pointer to struct listNode
+    int data;
+    struct listNode* next;
+} *ListNodePtr; // Alias for pointer to struct listNode
 
 // Definition of a singly linked list struct with a pointer to the head node.
 typedef struct list {
-	ListNodePtr head;
+    ListNodePtr head;
 } List;
 
 // Function to create and return a new empty list.
@@ -29,3 +28,11 @@ void delete_list(List* self, int data);
 
 // Function to free the memory allocated to a list and all its nodes.
 void destroy_list(List* self);
+
+// Additional functions for testing
+void list_test(void);
+void list_adhoc_test(void);
+
+// New functions: Reverse and Merge
+List reverse(List* self);
+List merge(List* list1, List* list2);

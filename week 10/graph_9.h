@@ -20,4 +20,6 @@ typedef struct graph {
     EdgeList* edges;
 } Graph;
 
-#endif // GRAPH_H
+void add_edge(Graph* self, int from, int to, int w);
+
+#endif
