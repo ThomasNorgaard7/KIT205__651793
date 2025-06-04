@@ -34,6 +34,10 @@ typedef struct {
     Node** nodes; // 2D array of nodes
 } Graph;
 
+typedef struct {
+    int row, col;
+} PathStep;
+
 Graph* create_graph_from_map(char** map, int rows, int cols, int* startRow, int* startCol, int* goalRow, int* goalCol);
 void free_graph(Graph* graph);
 

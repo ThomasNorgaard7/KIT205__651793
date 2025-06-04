@@ -19,12 +19,14 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="astar.h" />
     <ClInclude Include="dijkstra.h" />
     <ClInclude Include="display.h" />
     <ClInclude Include="graph.h" />
     <ClInclude Include="timer.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="astar.c" />
     <ClCompile Include="dijkstra.c" />
     <ClCompile Include="display.c" />
     <ClCompile Include="graph.c" />

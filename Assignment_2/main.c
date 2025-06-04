@@ -6,6 +6,7 @@
 
 #include "graph.h"
 #include "dijkstra.h"
+#include "astar.h"
 #include "display.h"
 #include "timer.h"
 
@@ -24,7 +25,7 @@ int main() {
         "PFPFFFFFP",
         "PPPWPWWWP",
         "PWWPFPWPP",
-        "PPPPWPWPG",
+        "PPPWGPWPW",
         "PPPPPPPPP"
     };
 
@@ -39,6 +40,9 @@ int main() {
     PathStep* path = NULL;
     int length = 0;
 
+    // ---------------------
+    // Dijkstra Algorithm
+    // ---------------------
     printf("\nDijkstra Method:\n");
 
     Timer timer;
@@ -57,6 +61,29 @@ int main() {
     }
     else {
         printf("No path found or path length is zero.\n");
+    }
+
+    // ---------------------
+    // A* Algorithm
+    // ---------------------
+    printf("\nA* Method:\n");
+
+    PathStep* path2 = NULL;
+    int length2 = 0;
+    Timer timer2;
+    timer_start(&timer2);
+
+    astar(graph, startRow, startCol, goalRow, goalCol, &path2, &length2);
+
+    double elapsed2 = timer_elapsed_seconds(&timer2);
+    printf("A* completed in %.6f seconds.\n", elapsed2);
+
+    if (length2 > 0 && path2 != NULL) {
+        print_map_with_path(test_map, rows, cols, path2, length2, dis_steps);
+        free(path2);
+    }
+    else {
+        printf("No path found using A*.\n");
     }
 
     free_graph(graph);
