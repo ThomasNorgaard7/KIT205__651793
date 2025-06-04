@@ -76,13 +76,3 @@ void free_graph(Graph* graph) {
     free(graph->nodes);
     free(graph);
 }
-
-
-void print_graph_costs(Graph* graph) {
-    for (int r = 0; r < graph->rows; r++) {
-        for (int c = 0; c < graph->cols; c++) {
-            printf("%2d ", graph->nodes[r][c].cost);
-        }
-        printf("\n");
-    }
-}

@@ -36,6 +36,5 @@ typedef struct {
 
 Graph* create_graph_from_map(char** map, int rows, int cols, int* startRow, int* startCol, int* goalRow, int* goalCol);
 void free_graph(Graph* graph);
-void print_graph_costs(Graph* graph);
 
 #endif
