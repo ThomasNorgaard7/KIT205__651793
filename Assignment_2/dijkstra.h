@@ -15,4 +15,6 @@ typedef struct {
 
 int dijkstra(Graph* graph, int start_row, int start_col, int goal_row, int goal_col, PathStep* out_path[], int* out_length);
 
+void print_map_with_path(char** map, int rows, int cols, PathStep* path, int length);
+
 #endif

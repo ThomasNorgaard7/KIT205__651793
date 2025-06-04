@@ -19,7 +19,12 @@ static int terrain_cost(char t) {
     }
 }
 
-Graph* create_graph_from_map(char** map, int rows, int cols) {
+Graph* create_graph_from_map(char** map, int rows, int cols, int* startRow, int* startCol, int* goalRow, int* goalCol) {
+    *startRow = -1;
+    *startCol = -1;
+    *goalRow = -1;
+    *goalCol = -1;
+    
     Graph* graph = malloc(sizeof(Graph));
     graph->rows = rows;
     graph->cols = cols;
@@ -39,6 +44,14 @@ Graph* create_graph_from_map(char** map, int rows, int cols) {
     // Set neighbors (up/down/left/right)
     for (int r = 0; r < rows; r++) {
         for (int c = 0; c < cols; c++) {
+            if (map[r][c] == 'S') {
+                *startRow = r;
+                *startCol = c;
+            }
+            else if (map[r][c] == 'G') {
+                *goalRow = r;
+                *goalCol = c;
+            }
             Node* node = &graph->nodes[r][c];
             int dirs[4][2] = {{-1,0},{1,0},{0,-1},{0,1}};
             for (int i = 0; i < 4; i++) {

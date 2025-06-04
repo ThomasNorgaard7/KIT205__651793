@@ -1,7 +1,8 @@
-// ================================
+﻿// ================================
 // main.c
 // ================================
 #include <stdio.h>
+#include <stdlib.h>  // For malloc/free
 #include "graph.h"
 #include "dijkstra.h"
 
@@ -9,33 +10,43 @@
 // This main driver was structured with ChatGPT to initialize a test terrain map, create a graph, and verify graph construction.
 
 int main() {
+    int rows = 9;
+    int cols = 9;
+
     char* test_map[] = {
-        "SPPPPF",
-        "PWWWWP",
-        "PFFPWP",
-        "PWPWGP"
+        "SPPPPPPPP",
+        "PWWWWWWWP",
+        "PFFPPPPPP",
+        "PWPWWWWWP",
+        "PFPFFFFFP",
+        "PPPWPWWWP",
+        "PWWPFPWPP",
+        "PPPPWPWPG",
+        "PPPPPPPPP"
     };
 
-    int rows = 4;
-    int cols = 6;
+    int startRow, startCol, goalRow, goalCol;
+    Graph* graph = create_graph_from_map(test_map, rows, cols, &startRow, &startCol, &goalRow, &goalCol);
 
-    Graph* graph = create_graph_from_map(test_map, rows, cols);
-
-    printf("Graph terrain cost map:\n");
+    printf("Start position: (%d, %d)\n", startRow, startCol);
+    printf("Goal position: (%d, %d)\n", goalRow, goalCol);
+    printf("\nGraph terrain cost map:\n");
     print_graph_costs(graph);
 
     PathStep* path = NULL;
     int length = 0;
 
-    dijkstra(graph, 0, 0, 3, 5, &path, &length);
+    dijkstra(graph, startRow, startCol, goalRow, goalCol, &path, &length);
 
-    printf("\nShortest path from S to G:\n");
-    for (int i = 0; i < length; i++) {
-        printf("(%d, %d) ", path[i].row, path[i].col);
+    if (length > 0 && path != NULL) {
+        print_map_with_path(test_map, rows, cols, path, length);
+
+        free(path);
     }
-    printf("\n");
+    else {
+        printf("No path found or path length is zero.\n");
+    }
 
-    free(path);
     free_graph(graph);
     return 0;
 }

@@ -14,8 +14,8 @@ typedef enum {
     TERRAIN_PLAIN = 1,
     TERRAIN_FOREST = 3,
     TERRAIN_WATER = 5,
-    TERRAIN_START = 1,
-    TERRAIN_GOAL = 1
+    TERRAIN_START = 0,
+    TERRAIN_GOAL = 0
 } TerrainCost;
 
 // Node in the grid
@@ -34,7 +34,7 @@ typedef struct {
     Node** nodes; // 2D array of nodes
 } Graph;
 
-Graph* create_graph_from_map(char** map, int rows, int cols);
+Graph* create_graph_from_map(char** map, int rows, int cols, int* startRow, int* startCol, int* goalRow, int* goalCol);
 void free_graph(Graph* graph);
 void print_graph_costs(Graph* graph);
 
